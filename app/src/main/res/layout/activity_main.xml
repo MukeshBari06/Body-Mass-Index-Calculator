@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="452dp"
+        android:layout_height="198dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/currency" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:id="@+id/layout1"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        >
+
+        <TextView
+            android:id="@+id/height1"
+            android:layout_width="209dp"
+            android:layout_height="46dp"
+            android:layout_weight=".4"
+            android:ems="10"
+            android:text="Height"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+        <EditText
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_weight=".6"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:hint="Height (in cm)"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/imageView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1.0"
+        app:layout_constraintTop_toBottomOf="@+id/layout1"
+        android:id="@+id/layout"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        >
+
+        <TextView
+            android:id="@+id/weight1"
+            android:layout_width="213dp"
+            android:layout_height="46dp"
+            android:layout_weight=".4"
+            android:ems="10"
+            android:text="Weight"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/layout1" />
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_weight=".6"
+            android:layout_height="46dp"
+            android:ems="10"
+            android:hint="Weight (in kg)"
+            android:inputType="number"
+            app:layout_constraintTop_toBottomOf="@id/layout1" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/converterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="140dp"
+        android:onClick="convert"
+        android:text="@string/convert"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout"
+        app:layout_constraintVertical_bias="0.073"
+        tools:text="@string/convert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
